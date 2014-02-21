@@ -24,10 +24,11 @@
 				<li><a href="http://www..../news">News</a></li>
 				<li><a href="http://www..../contact">Contact</a></li> 
 			</ul> 
-
+			<% if @cart %>
 			<div id="cart">
 				<%= render @cart %>
 			</div>
+			<% end -%>
 		</div> 
 		<div id="main"> 
 			<%= yield %> 
