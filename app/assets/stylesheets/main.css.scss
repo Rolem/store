@@ -1,0 +1,348 @@
+// ----
+//Font Faces
+// ----
+@font-face {
+  font-family: 'Kautiva';
+  src: url('Kautiva.ttf');
+  src: local('Kautiva'), local('Kautiva'), url(Kautiva.ttf) format('truetype')
+}
+@font-face {
+  font-family: 'Kautiva-Bold';
+  src: url('Kautiva-Bold.ttf');
+  src: local('Kautiva-Bold'), local('Kautiva-Bold'), url(Kautiva-Bold.ttf) format('truetype')
+}
+@font-face {
+  font-family: 'Kautiva-Italic';
+  src: url('Kautiva-Italic.ttf');
+  src: local('Kautiva-Italic'), local('Kautiva-Italic'), url(Kautiva-Italic.ttf) format('truetype')
+}
+@font-face {
+  font-family: 'Kautiva-Black';
+  src: url('Kautiva-Black.ttf');
+  src: local('Kautiva-Black'), local('Kautiva-Black'), url(Kautiva-Black.ttf) format('truetype')
+}
+@font-face {
+  font-family: 'Kautiva-Black-Italic';
+  src: url('Kautiva-Black-Italic.ttf');
+  src: local('Kautiva-Black-Italic'), local('Kautiva-Black-Italic'), url(Kautiva-Black-Italic.ttf) format('truetype')
+}
+@font-face {
+  font-family: 'Kautiva-Bold-Italic';
+  src: url('Kautiva-Bold-Italic.ttf');
+  src: local('Kautiva-Bold-Italic'), local('Kautiva-Bold-Italic'), url(Kautiva-Bold-Italic.ttf) format('truetype')
+}
+
+
+
+
+//--------
+//Escafold
+//--------
+
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: Kautiva, Helvetica;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+p, ol, ul, td {
+  font-family: Kautiva, Helvetica;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a {
+  color: #000;
+  &:visited {
+    color: #666;
+  }
+  &:hover {
+    color: #fff;
+    background-color: #000;
+  }
+}
+
+div {
+  &.field, &.actions {
+    margin-bottom: 10px;
+  }
+}
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #c00;
+    color: #fff;
+  }
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
+}
+
+
+//--------
+//General
+//--------
+
+
+#banner {
+  background: #9c9;
+  padding: 10px;
+  border-bottom: 2px solid;
+  font: 40px/40px  Kautiva, Helvetica;
+  color: #282;
+  text-align: center;
+
+  img {
+    width: 1em;
+  }
+}
+
+#notice {
+  color: #000 !important;
+  border: 2px solid red;
+  padding: 1em;
+  margin-bottom: 2em;
+  background-color: #f0f0f0;
+  font: bold smaller sans-serif;
+}
+
+#columns {
+  background: #141;
+
+  #main {
+    margin-left: 17em;
+    padding: 1em;
+    background: white;
+  }
+
+//#START:side
+  #side {
+    float: left;
+    padding: 1em 2em;
+    width: 13em;
+    background: #141;
+
+    form, div {
+      display: inline;
+    }  
+ 
+    input {
+      font-size: small;
+    }
+
+    #cart {
+      font-size: smaller;
+      color:     white;
+
+      table {
+        border-top:    1px dotted #595;
+        border-bottom: 1px dotted #595;
+        margin-bottom: 10px;
+      }
+    }
+
+    ul {
+      padding: 0;
+
+      li {
+        list-style: none;
+
+        a {
+          color: #bfb;
+          font-size: small;
+        }
+      }
+    }
+  }
+//#END:side
+}
+
+//#START:form
+.depot_form {
+  fieldset {
+    background: #efe;
+
+    legend {
+      color: #dfd;
+      background: #141;
+      font-family: Kautiva, Helvetica;
+      padding: 0.2em 1em;
+    }
+  }
+
+  form {
+    label {
+      width: 5em;
+      float: left;
+      text-align: right;
+      padding-top: 0.2em;
+      margin-right: 0.1em;
+      display: block;
+    }
+
+    select, textarea, input {
+      margin-left: 0.5em;
+    }
+
+    .submit {
+      margin-left: 4em;
+    }
+
+    br {
+      display: none
+    }
+  }
+}
+//#END:form
+
+//-------
+//Carrito
+//-------
+
+.carts, #side #cart {
+  .item_price, .total_line {
+    text-align: right;
+  }
+  .total_line .total_cell {
+    font-weight: bold;
+    border-top: 1px solid #595;
+  }
+}
+
+
+//---------
+//productos
+//---------
+
+
+
+
+.products{
+  table{
+    border-collapse:collapse; 
+
+  } 
+
+  tabletrtd{
+      padding:5px; 
+    vertical-align:top;
+  } 
+
+  .list_image{
+    width: 60px; 
+    height:70px;
+  } 
+
+  .list_description{
+    width:60%; 
+
+    dl{
+      margin:0;
+    } 
+
+    dt{ 
+      color: #244; 
+      font-weight: bold;
+      font-size: larger; 
+    } 
+
+    dd{
+     margin:0;
+    }
+  } 
+  .list_actions{
+     font-size: x-small; 
+     text-align: right;
+     padding-left:1em;
+  } 
+
+  .list_line_even{
+    background: #e0f8f8; 
+  } 
+
+  .list_line_odd{
+    background: #f8b0f8; 
+  }
+} 
+
+
+//-------
+//store
+//-------
+
+.store {
+  h1 {
+    margin: 0;
+    padding-bottom: 0.5em;
+    font:  150%  Kautiva, Helvetica;
+    color: #226;
+    border-bottom: 3px dotted #77d;
+  }
+
+  /* An entry in the store catalog */
+  .entry {
+    overflow: auto;
+    margin-top: 1em;
+    border-bottom: 1px dotted #77d;
+    min-height: 100px;
+
+    img {
+      width: 80px;
+      margin-right: 5px;
+      margin-bottom: 5px;
+      position: absolute;
+    }
+
+    h3 {
+      font-size: 120%;
+      font-family: Kautiva, Helvetica;
+      margin-left: 100px;
+      margin-top: 0;
+      margin-bottom: 2px;
+      color: #227;
+    }
+
+    p, div.price_line {
+      margin-left: 100px;
+      margin-top: 0.5em; 
+      margin-bottom: 0.8em; 
+    }
+
+    .price {
+      color: #44a;
+      font-weight: bold;
+      margin-right: 3em;
+    }
+  }
+}
